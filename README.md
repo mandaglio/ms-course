@@ -65,7 +65,7 @@ ENTRYPOINT ["java","-jar","/hr-eureka-server.jar"]
 ```
 mvnw clean package
 docker build -t hr-eureka-server:v1 .
-docker run hr-eureka-server:v1 -p 8761:8761 --name hr-eureka-server --network hr-net
+docker run -p 8761:8761 --name hr-eureka-server --network hr-net hr-eureka-server:v1
 ```
 
 ## hr-worker
