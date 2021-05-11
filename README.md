@@ -78,5 +78,5 @@ ENTRYPOINT ["java","-jar","/hr-worker.jar"]
 ```
 mvnw clean package -DskipTests
 docker build -t hr-worker:v1 .
-docker run hr-worker:v1 -P --network hr-net
+docker run -P --network hr-net hr-worker:v1
 ```
